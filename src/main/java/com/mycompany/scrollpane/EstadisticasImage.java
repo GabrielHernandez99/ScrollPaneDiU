@@ -21,7 +21,7 @@ import org.opencv.core.Scalar;
  * @author jorge
  */
 
-public class EstadisticasImagen {
+public class EstadisticasImage {
 
     public final int fAzul = 0;
     public final int fVerde = 1;
@@ -58,7 +58,7 @@ public class EstadisticasImagen {
         split(Simagen, bgr);
 
       
-        EstadisticasImagen res = new EstadisticasImagen();
+        EstadisticasImage res = new EstadisticasImage();
 
         for (int c : res.Componentes) {
             //máximo y mínimo del canal c de la Simagen
@@ -66,9 +66,9 @@ public class EstadisticasImagen {
             //premodio del canal c de la Simagen
             Scalar prom_scalar = mean(bgr.get(c));
 
-            EstadisticasImagen.maximo[c] = (int) minmax.maxVal;
-            EstadisticasImagen.minimo[c] = (int) minmax.minVal;
-            EstadisticasImagen.promedio[c] = (int) prom_scalar.val[0];
+            EstadisticasImage.maximo[c] = (int) minmax.maxVal;
+            EstadisticasImage.minimo[c] = (int) minmax.minVal;
+            EstadisticasImage.promedio[c] = (int) prom_scalar.val[0];
         }
     }
 

@@ -21,7 +21,7 @@ public class MiListener implements AdjustmentListener{
     private JViewport vp;
     @Override
     public void adjustmentValueChanged(AdjustmentEvent arg0) {
-        EstadisticasImagen.calculaEstadisticas(toMat(), vp.getViewPosition(),vp.getExtentSize());
+        EstadisticasImage.calculaEstadisticas(toMat(), vp.getViewPosition(),vp.getExtentSize());
         MainFrame.refreshStats();
     }
     
